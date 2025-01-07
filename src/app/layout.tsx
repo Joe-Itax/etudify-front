@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/header/header";
+import { poppins } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   authors: [
@@ -12,13 +11,13 @@ export const metadata: Metadata = {
     },
   ],
   title: {
-    default: "Etudiant 3.0",
-    template: "%s | Etudiant 3.0",
+    default: "Etudify",
+    template: "%s | Etudify",
   },
   description:
-    "Etudiant 3.0 connecte les étudiants pour l'entraide scolaire, groupes d'études, tutorat, et partage de ressources pédagogiques. Destiné à tous les étudiants.",
+    "Etudify connecte les étudiants pour l'entraide scolaire, groupes d'études, tutorat, et partage de ressources pédagogiques. Destiné à tous les étudiants.",
   keywords:
-    "Etudiant 3.0, étudiant 3.0, étudiant, entraide scolaire, groupes d'étude, tutorat, partage de ressources pédagogiques, cours en ligne, mentorat, discussion académique, performance académique, événements éducatifs, webinaires, collaboration en ligne, opportunités de stage, emploi étudiant, jeux éducatifs, quiz interactifs, communauté étudiante, communauté estudiantine, soutien académique, réseau étudiant, éducation en ligne",
+    "Etudify, étudiant 3.0, étudiant, entraide scolaire, groupes d'étude, tutorat, partage de ressources pédagogiques, cours en ligne, mentorat, discussion académique, performance académique, événements éducatifs, webinaires, collaboration en ligne, opportunités de stage, emploi étudiant, jeux éducatifs, quiz interactifs, communauté étudiante, communauté estudiantine, soutien académique, réseau étudiant, éducation en ligne",
   robots: "index, follow",
 };
 
@@ -29,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

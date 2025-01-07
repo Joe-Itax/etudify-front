@@ -4,16 +4,20 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0, 0%, 95%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* --primary: 226 71% 43%; */
+    /* --primary: 257 83% 16%; */
+    --primary: 26 7 73;
+    --primary-2: 35 12 90;
+    --primary-foreground: 235 229 255;
+    /* --secondary: 210 40% 96.1%;  */
+    --secondary: 235 229 255;
+    --secondary-foreground: 26 7 73;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
@@ -32,7 +36,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 254 254 254;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -61,9 +65,38 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border relative;
   }
+
+  html {
+    @apply w-full h-full scroll-smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply w-full h-full bg-background text-foreground relative;
+  }
+
+  h1 {
+    @apply text-[3rem] font-bold max-[800px]:text-[2.5rem];
+  }
+
+  h2 {
+    @apply text-[2.7rem] font-semibold max-[800px]:text-[2.2rem];
+  }
+
+  h3 {
+    @apply text-[2rem] font-medium max-[800px]:text-[1.9rem] max-[500px]:text-[1.5rem];
+  }
+
+  h4 {
+    @apply text-[1.9rem] font-normal max-[800px]:text-[1.6rem];
+  }
+
+  h5 {
+    @apply text-[1.7rem] font-normal max-[800px]:text-[1.3rem];
+  }
+
+  h6 {
+    @apply text-[1.4rem] font-normal max-[800px]:text-[1rem];
   }
 }
