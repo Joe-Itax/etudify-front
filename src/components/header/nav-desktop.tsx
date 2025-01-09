@@ -7,42 +7,42 @@ export default function NavDesktop({ className }: { className?: string }) {
   const path = usePathname();
   return (
     <nav className={`flex justify-between ${className}`}>
-      <ul className={`flex justify-center items-center`}>
-        <li>
+      <ul className={``}>
+        {/* <li>
           <Link href="/" className={clsx("", path === "/" && "active")}>
             Accueil
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
-            href="/services"
-            className={clsx("", path === "/services" && "active")}
+            href="/dashbord"
+            className={clsx("", path === "/dashbord" && "active")}
           >
-            Services
+            Dashbord
           </Link>
         </li>
         <li>
           <Link
-            href="/realisations"
-            className={clsx("", path === "/realisations" && "active")}
+            href="/ressources"
+            className={clsx("", path === "/ressources" && "active")}
           >
-            Réalisations
+            Ressources
           </Link>
         </li>
         <li>
           <Link
-            href="/about"
-            className={clsx("", path === "/about" && "active")}
+            href="/forum"
+            className={clsx("", path === "/forum" && "active")}
           >
-            A Propos
+            Forum
           </Link>
         </li>
         <li>
           <Link
-            href="/contact"
-            className={clsx("", path === "/contact" && "active")}
+            href="/support"
+            className={clsx("", path === "/support" && "active")}
           >
-            Contact
+            Support & Aide
           </Link>
         </li>
       </ul>

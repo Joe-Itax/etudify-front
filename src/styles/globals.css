@@ -65,7 +65,7 @@
 
 @layer base {
   * {
-    @apply border-border relative;
+    @apply border-border relative duration-300;
   }
 
   html {
@@ -98,5 +98,30 @@
 
   h6 {
     @apply text-[1.4rem] font-normal max-[800px]:text-[1rem];
+  }
+}
+
+/* --------------------------------------- */
+/* Header CSS */
+@layer base {
+  header nav ul {
+    @apply flex justify-center items-center gap-1;
+  }
+
+  header nav ul li a {
+    @apply px-2 py-2 hover:bg-primary2/95 rounded-sm hover:text-primary-foreground;
+  }
+  header nav ul li a.active {
+    @apply text-primary-foreground bg-primary2;
+  }
+
+  nav.nav-mobile ul li {
+    @apply w-full;
+  }
+  nav.nav-mobile ul li a {
+    @apply px-2 py-2 hover:bg-primary2/95 rounded-sm hover:text-primary-foreground block w-full;
+  }
+  nav.nav-mobile ul li a.active {
+    @apply text-primary-foreground bg-primary2;
   }
 }

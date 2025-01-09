@@ -1,10 +1,11 @@
+import { Search } from "@/components/search.component";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 // import bgHeroSection from "/public/assets/bg-hero-section.jpg";
 
 export default function Home() {
   return (
-    //  bg-[url('/assets/bg-hero-section.jpg')]
     <main className="">
       <section className="hero-sect w-full h-screen">
         <div className="h-screen absolute top-0 left-0 w-full -z-50">
@@ -16,17 +17,21 @@ export default function Home() {
             className="w-full h-full"
           />
         </div>
-        <div className="w-full flex flex-col justify-center items-center py-20 pt-52">
+        <div className="w-full flex flex-col justify-center items-center py-20 px-8 sm:pt-52 min-[500px]:pt-40 pt-36">
           <h1 className="text-center">
             The Creators library of <br /> components & templates
           </h1>
           <div className="w-full flex justify-center py-4">
-            <p className="text-center w-[35rem]">
+            <p className="text-center sm:w-[35rem]">
               Etudify is the world&apos;s largest premium library of Webflow,
               Figma & Framer components and tools. Build better, faster with
               Etudify .
             </p>
           </div>
+        </div>
+
+        <div className="w-full flex justify-center items-center">
+          <Search placeholder="Search Components (eg. Footer, Header)" />
         </div>
       </section>
       <div className="flex flex-wrap gap-8">

@@ -13,6 +13,7 @@ import { RiAtLine, RiMenu4Line } from "@remixicon/react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
+import { EtudifyLogo } from "../etudify-logo.component";
 // import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
 
 export default function NavMobile() {
@@ -23,28 +24,27 @@ export default function NavMobile() {
   };
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className={`min-[1240px]:hidden`}>
-        <div className="menu-icon-box cursor-pointer min-[1240px]:hidden z-50 p-2 dark:bg-[#262626] bg-[#dcdcdc] abcdef rounded-md">
+      <SheetTrigger asChild className={`min-[1000px]:hidden`}>
+        <div className="menu-icon-box cursor-pointer min-[1000px]:hidden z-50 p-2 dark:bg-[#262626] bg-[#dcdcdc] abcdef rounded-md">
           <RiMenu4Line
             size={35}
             className="menu-icon rounded-lg icon-hamburger open-menu"
           />
         </div>
       </SheetTrigger>
-      <SheetContent className="w-full min-[400px]:w-[400px] min-[1240px]:hidden flex flex-col last:justify-end">
+      <SheetContent className="w-full min-[400px]:w-[400px] min-[1000px]:hidden flex flex-col last:justify-end bg-white">
         <SheetHeader className="flex flex-row">
           <Link
             onClick={() => setOpenState()}
             href="/"
             className={`flex justify-center items-center`}
           >
-            <RiAtLine size={40} />
-            <span className="text-[2rem] font-bold">Genius</span>
+            <EtudifyLogo />
           </Link>
         </SheetHeader>
         <SheetClose></SheetClose>
         <nav className={`flex justify-center items-center nav-mobile`}>
-          <ul className="flex flex-col w-full">
+          <ul className="flex gap-1 flex-col w-full">
             <li>
               <Link
                 onClick={() => setOpenState()}
@@ -57,37 +57,71 @@ export default function NavMobile() {
             <li>
               <Link
                 onClick={() => setOpenState()}
-                href="/services"
-                className={clsx("", path === "/services" && "active")}
+                href="/dashbord"
+                className={clsx("", path === "/dashbord" && "active")}
               >
-                Services
+                Dashbord
               </Link>
             </li>
             <li>
               <Link
                 onClick={() => setOpenState()}
-                href="/realisations"
-                className={clsx("", path === "/realisations" && "active")}
+                href="/ressources"
+                className={clsx("", path === "/ressources" && "active")}
               >
-                Réalisations
+                Ressources
               </Link>
             </li>
             <li>
               <Link
                 onClick={() => setOpenState()}
-                href="/about"
-                className={clsx("", path === "/about" && "active")}
+                href="/forum"
+                className={clsx("", path === "/forum" && "active")}
               >
-                A Propos
+                Forum
               </Link>
             </li>
+
+            <div className="">
+              <li>
+                <Link
+                  onClick={() => setOpenState()}
+                  href="/login"
+                  className={clsx("", path === "/login" && "active")}
+                >
+                  Se connecter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => setOpenState()}
+                  href="/signup"
+                  className={clsx("", path === "/signup" && "active")}
+                >
+                  S&apos;inscrire
+                </Link>
+              </li>
+            </div>
+
+            <div className="hidden">
+              <li>
+                <Link
+                  onClick={() => setOpenState()}
+                  href="/profile"
+                  className={clsx("", path === "/profile" && "active")}
+                >
+                  Profile
+                </Link>
+              </li>
+            </div>
+
             <li>
               <Link
                 onClick={() => setOpenState()}
-                href="/contact"
-                className={clsx("", path === "/contact" && "active")}
+                href="/support"
+                className={clsx("", path === "/support" && "active")}
               >
-                Contact
+                Support & Aide
               </Link>
             </li>
           </ul>
