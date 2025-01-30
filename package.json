@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.16.5",
     "@mui/material": "^5.16.5",
     "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-hover-card": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
@@ -41,7 +42,7 @@
     "socket.io-client": "^4.7.5",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
-    "use-debounce": "^10.0.1",
+    "use-debounce": "^10.0.4",
     "video.js": "^8.16.1",
     "zod": "^3.23.8"
   },
