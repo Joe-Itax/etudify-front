@@ -1,5 +1,5 @@
 import { MostPopularRessource } from "@/components/most-popular-ressource.component";
-import { BtnSearchRedirectToSearchRessourcePageInput } from "@/components/search.component";
+import { WrapperBtnSearchRedirectToSearchRessourcePageInput } from "@/components/search-wrapper.component";
 import { Button } from "@/components/ui/button";
 import {
   Book,
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-center items-center px-4">
-          <BtnSearchRedirectToSearchRessourcePageInput />
+          <WrapperBtnSearchRedirectToSearchRessourcePageInput />
         </div>
 
         <div className="w-full flex justify-center items-center px-4 py-6">
