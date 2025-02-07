@@ -1,4 +1,4 @@
-import { SearchWrapper } from "@/components/search-wrapper.component";
+import { Search } from "@/components/search.component";
 import { Suspense } from "react";
 
 interface Props {
@@ -15,7 +15,7 @@ export default function Page({ params }: Props) {
       <h1>Page {id}</h1>
       <p>Page content</p>
       <Suspense fallback={<div>Chargement...</div>}>
-        <SearchWrapper />
+        <Search placeholder="Rechercher une Ressource (ex. Math, Science, etc...)" />
       </Suspense>
     </>
   );

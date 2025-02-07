@@ -1,5 +1,5 @@
 import { MostPopularRessource } from "@/components/most-popular-ressource.component";
-import { WrapperBtnSearchRedirectToSearchRessourcePageInput } from "@/components/search-wrapper.component";
+import { BtnSearchRedirectToSearchRessourcePageInput } from "@/components/search.component";
 import { Button } from "@/components/ui/button";
 import {
   Book,
@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -45,7 +46,9 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-center items-center px-4">
-          <WrapperBtnSearchRedirectToSearchRessourcePageInput />
+          <Suspense fallback={<div>Chargement...</div>}>
+            <BtnSearchRedirectToSearchRessourcePageInput />
+          </Suspense>
         </div>
 
         <div className="w-full flex justify-center items-center px-4 py-6">
